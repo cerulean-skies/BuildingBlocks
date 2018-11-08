@@ -15,7 +15,7 @@ let foundPosts = 0;
 
 var filePath = './new.html';
 fs.unlink('./new.html',function(err){
-     if(err) return console.log('HTML File not found. Will create for you.'.red.bold);
+     if(err) return console.log(err);
      console.log('file deleted successfully');
 });
 
@@ -39,7 +39,7 @@ let daysOld = new Date();
 // runtime.setDate(runTime.getDate() - 0)
 daysOld.setDate(runtime.getDate() - 5)
 
-// console.log("Today is: ", runtime,'\nChecking posts before: ' + daysOld);
+console.log("Today is: ", runtime,'\nChecking posts before: ' + daysOld);
 let offset = 0;
 
 let ONE_MINUTE = 60 * 1000;
